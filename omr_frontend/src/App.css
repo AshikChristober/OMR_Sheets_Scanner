@@ -1,0 +1,129 @@
+/* ---------- Base Styles ---------- */
+.App {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding-top: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ---------- Upload Box ---------- */
+.upload-box {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Buttons ---------- */
+button {
+  padding: 12px 28px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background: #b0c4de;
+  cursor: not-allowed;
+}
+
+/* ---------- Results Section ---------- */
+.result {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.result h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.result p {
+  font-size: 16px;
+  color: #333;
+  margin: 6px 0;
+}
+
+img {
+  margin-top: 15px;
+  border-radius: 10px;
+  max-width: 100%;
+  border: 2px solid #007bff;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Loader Spinner ---------- */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #007bff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Overlay (Blur During Evaluation) ---------- */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
